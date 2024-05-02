@@ -18,3 +18,18 @@ export default function Home() {
     </Layout>
   );
 }
+
+// function returns div
+// get current unixtime
+// target unixtime
+// if it's even, show the time
+//  return the clock div
+// if it's odd, show text for 20 seconds
+//  set target to time.now() = 20 seconds
+//  return the text div
+// while loop
+//  while time.now is less than target unix time
+//  show text
+
+//  a function that runs every second
+//  variable to track what should show
