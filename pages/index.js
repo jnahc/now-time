@@ -3,6 +3,8 @@ import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import Clock from 'react-live-clock';
 
+var timeSection = <Clock format="HH:mm:ss" interval={1000} ticking={true} />;
+
 export default function Home() {
   return (
     <Layout home>
@@ -11,13 +13,31 @@ export default function Home() {
       </Head>
       <section className={utilStyles.headingMd}>
         <p>What's the time?</p>
-        <p>
-          <Clock format="HH:mm:ss" interval={1000} ticking={true} />
-        </p>
+        {timeSection}
       </section>
     </Layout>
   );
 }
+
+console.log(Date.now());
+
+// var currentUnixTime = ;
+// var targetUnixTime = ;
+
+// function runs every second
+
+// function setTimeSection() {
+  // if not targetUnixTime
+    // random 1 or 2
+    // if random = 1
+    // targetUnixTime = currentUnixTime + 20sec
+  // elif:
+    // targetUnixTime >= currentUnixTime:
+    // targetUnixTime = 0
+    // timeSection = clock
+  // else:
+    // timeSection = msg
+// }
 
 // function returns div
 // get current unixtime
